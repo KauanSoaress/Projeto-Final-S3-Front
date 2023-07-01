@@ -1,5 +1,5 @@
 import {httpClient} from "../http";
-import {IUserRegister} from "../../types/models";
+import {IUserRegister, IUserAuth} from "../../types/models";
 import {AxiosResponse} from "axios";
 
 
@@ -14,6 +14,12 @@ export const useAuthService = () => ({
         return response.data;
     },
 
-
+    authenticate: async (credentials: IUserAuth)=> {
+        const response: AxiosResponse<IUserAuth> = await httpClient.post(
+        `${resourceURL}/authenticate`,
+        {...credentials}
+        )
+        return response.data;
+    }
 
 })
