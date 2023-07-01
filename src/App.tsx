@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom"
-import {AppRoutes} from '../src/Routes/Index.tsx'
+import {AppRoutes} from './routes/Index.tsx'
 
 function App() {
 
