@@ -8,8 +8,8 @@ export default function NavBar() {
         <div className="left-side">
           <img src="Logo.svg" alt="Logo image" />
 
-          <Link className="navbarCategories hover-underline-animation" to="/">Cardápio</Link>
-          <Link className="navbarCategories hover-underline-animation" to="/">Promoções</Link>
+          <Link className="navbarCategories hover-underline-animation" to="/cardapio">Cardápio</Link>
+          <Link className="navbarCategories hover-underline-animation" to="/promotion">Promoções</Link>
 
         </div>
         <div className="right-side">
