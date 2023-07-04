@@ -1,0 +1,30 @@
+.card-container {
+
+  width: 20rem;
+  height: 40rem;
+
+  border-radius: 25px;
+  margin: 2.5rem;
+  text-decoration: none;
+}
+
+.card-text {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  font-size: 50px;
+  font-family: Sansita Swashed;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  z-index: 999;
+}
+
+.card-container img{
+  position: absolute;
+  z-index: -1;
+  width: 20rem;
+}
