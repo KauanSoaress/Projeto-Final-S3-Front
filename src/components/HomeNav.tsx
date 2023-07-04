@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 export default function NavBar() {
   return (
     <>
+      {/* Div para a navbar da home */}
       <div className="geral">
         <div className="container-HomeNav">
           <div className="left-side">
@@ -26,6 +27,7 @@ export default function NavBar() {
           </div>
         </div>
 
+        {/* Div para o container da home */}
         <div className="container-inicio">
 
           <div className="inicio-left-side">
