@@ -10,7 +10,7 @@ export default function NavBar() {
             <img src="Logo.svg" alt="Logo image" />
           </Link>
 
-          <Link className="navbarCategories hover-underline-animation" to="/cardapio">Cardápio</Link>
+          <Link className="navbarCategories hover-underline-animation" to="/menu">Cardápio</Link>
           <Link className="navbarCategories hover-underline-animation" to="/promotion">Promoções</Link>
 
         </div>
@@ -19,7 +19,7 @@ export default function NavBar() {
             <img src="User.svg" alt="User image" />
             <p className='text hover-underline-animation'>FAZER LOGIN<br/>ou CADASTRAR-SE</p>
           </Link>
-          <Link to="/">
+          <Link to="/cart">
             <img src="Cart.svg" alt="Cart image" />
           </Link>
         </div>

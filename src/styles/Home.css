@@ -9,3 +9,9 @@ h1 {
 
   margin: 2rem;
 }
+
+.carousel {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
