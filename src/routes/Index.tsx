@@ -1,15 +1,15 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Home from '../pages/Home.tsx'
-import Login from '../pages/Login.tsx'
-import Register from '../pages/Register.tsx'
-import Promotion from '../pages/Promotion.tsx'
+import Index from '../pages/home'
+import Login from '../pages/login'
+import Register from '../pages/register'
+import Promotion from '../pages/promotion'
 import Menu from '../pages/Menu.tsx'
-import Cart from '../pages/Cart.tsx'
+import Cart from '../pages/cart'
 
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/home" element={<Home/>}/>
+      <Route path="/home" element={<Index/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/promotion" element={<Promotion/>}/>

@@ -1,9 +1,9 @@
-import '../styles/Forms.css'
-import '../styles/Forms2.css'
+import '../../styles/Forms.css'
+import '../../styles/Forms2.css'
 
-import {Inputs} from '../components/Inputs'
-import {Button} from '../components/Button'
-import BackHome from '../components/BackHome'
+import {Inputs} from '../../components/Inputs.tsx'
+import {Button} from '../../components/Button.tsx'
+import BackHome from '../../components/BackHome.tsx'
 
 export default function Register () {
   return (

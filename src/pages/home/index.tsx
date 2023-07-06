@@ -1,6 +1,6 @@
-import HomeNav from '../components/HomeNav'
+import HomeNav from '../../components/HomeNav'
 import '../styles/Home.css'
-import { HomeCards } from '../components/HomeCards'
+import { HomeCards } from '../../components/HomeCards'
 
 export default function Home () {
   return (

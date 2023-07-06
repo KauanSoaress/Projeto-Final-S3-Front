@@ -1,9 +1,9 @@
-import '../styles/Forms.css'
-import '../styles/Forms2.css'
-import {Inputs} from '../components/Inputs'
-import {Button} from '../components/Button'
+import '../../styles/Forms.css'
+import '../../styles/Forms2.css'
+import {Inputs} from '../../components/Inputs.tsx'
+import {Button} from '../../components/Button.tsx'
 import {Link} from 'react-router-dom'
-import BackHome from '../components/BackHome'
+import BackHome from '../../components/BackHome.tsx'
 
 export default function Login() {
   return (
@@ -24,7 +24,6 @@ export default function Login() {
                 <Inputs name="Senha" isPassword={true}/>
 
                 <Button>Acessar</Button>
-                
 
                 <div className="text-center p-t-50">
                   <span className="txt1">
