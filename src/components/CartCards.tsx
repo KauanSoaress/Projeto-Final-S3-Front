@@ -16,7 +16,10 @@ export const CartCards = ({img, productName, productDescription, priceProduct}: 
                 <p className='productTitle'>{productName}</p>
                 <p className='productDescription'>{productDescription}</p>
             </div>
-            <div className="priceProduct">{priceProduct}</div>
+            <div className="priceProduct">
+                R${priceProduct}
+                <input type="number"/>
+            </div>
         </div>
         </>
     )

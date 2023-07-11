@@ -9,7 +9,12 @@ export default function Cart(){
       <NavBar />
       <PageTitle>Meu Carrinho</PageTitle>
       <div className="cart-cards-container">
-        <CartCards img="PizzaCogumelo.svg" productName="Pizza de Calabresa" productDescription="Calabresa, mussarela, tomate e orégano." priceProduct={29.90}/>
+        <CartCards img="PizzaCogumelo.svg" productName="Pizza de Camarão" productDescription="Cogumelo, azeitonas, 
+tomate, cebolinha" priceProduct={29.90}/>
+        <CartCards img="PizzaCogumelo.svg" productName="Pizza de Camarão" productDescription="Cogumelo, azeitonas, 
+tomate, cebolinha" priceProduct={29.90}/>
+      </div>
+      <div className="confirm-purchase">
         
       </div>
     </>   
