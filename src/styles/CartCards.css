@@ -1,0 +1,40 @@
+.products-cart-container {
+    background: #D9D9D9;
+    width: 700px;
+    height: 200px;
+    border-radius: 40px;
+    display: flex; 
+}
+
+.products-cart-container img {
+    width: 13rem;
+}
+
+.productTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.productDescription{
+    font-size: 1rem;
+}
+
+.productDescription, .productTitle{
+    display: flex;
+    justify-content: left;
+}
+
+.textCard{
+    width: 34%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+.priceProduct{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: auto 0;
+}
+
