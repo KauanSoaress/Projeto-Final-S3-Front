@@ -11,7 +11,6 @@ export default function NavBar() {
           </Link>
 
           <Link className="navbarCategories hover-underline-animation" to="/menu">Cardápio</Link>
-          <Link className="navbarCategories hover-underline-animation" to="/promotion">Promoções</Link>
 
         </div>
         <div className="right-side">
