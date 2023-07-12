@@ -1,6 +1,8 @@
 import NavBar from '../../components/NavBar'
 import { PromotionCard } from '../../components/PromotionCard.tsx'
 import { PageTitle } from '../../components/PageTitle.tsx'
+import '../../styles/Menu.css'
+
 
 export default function Home () {
   return (
