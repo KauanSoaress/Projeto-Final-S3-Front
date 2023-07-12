@@ -6,6 +6,9 @@ import {Link} from 'react-router-dom'
 import BackHome from '../../components/BackHome.tsx'
 
 export default function Login() {
+
+  const handleClick = () => {}
+
   return (
     <>
       <BackHome />

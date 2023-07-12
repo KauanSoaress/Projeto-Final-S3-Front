@@ -12,6 +12,7 @@ const UserRegistrationProvider: React.FC<PropsWithChildren> = ({ children }) => 
     const navigate = useNavigate();
 
     const [userToRegister, setUserToRegister] = useState<IUserRegister>(userRegisterInitialState);
+
     function handleSave(){
         api.register(userToRegister)
             .then(() => {
@@ -22,9 +23,62 @@ const UserRegistrationProvider: React.FC<PropsWithChildren> = ({ children }) => 
         })
     }
 
+    function handleChangeName(newName: string){
+        const objectToSave: IUserRegister = {
+            ...userToRegister,
+        }
+
+        objectToSave.name = newName;
+
+        setUserToRegister({
+            ...objectToSave,
+        })
+    }
+
+    function handleChangeCPF(newCPF: string){
+        const objectToSave: IUserRegister = {
+            ...userToRegister,
+        }
+
+        objectToSave.cpf = newCPF;
+
+        setUserToRegister({
+            ...objectToSave,
+        })
+    }
+
+    function handleChangePassword(newPassword: string){
+        const objectToSave: IUserRegister = {
+            ...userToRegister,
+        }
+
+        objectToSave.password = newPassword;
+
+        setUserToRegister({
+            ...objectToSave,
+        })
+    }
+
+    function handleChangeConfirmPassword(newConfirmPassword: string){
+        const objectToSave: IUserRegister = {
+            ...userToRegister,
+        }
+
+        objectToSave.confirmPassword = newConfirmPassword;
+
+        setUserToRegister({
+            ...objectToSave,
+        })
+    }
+
     const context = useMemo(() => ({
         handleSave,
-    }),[]);
+        userToRegister,
+        handleChangeName,
+        handleChangeCPF,
+        handleChangePassword,
+        handleChangeConfirmPassword,
+    }),[userToRegister]);
     return (
         <UserRegisterContext.Provider value={context} >
             {children}
