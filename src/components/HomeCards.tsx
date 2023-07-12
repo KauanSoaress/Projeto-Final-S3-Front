@@ -8,7 +8,7 @@ interface HomeCardsProps {
 export const HomeCards = ({img}: HomeCardsProps) => {
   return (
     <>
-      <Link to="/menu" className="home-card-container">
+      <Link to="/pizzas" className="home-card-container">
         <img src={img} alt="Products" />
       </Link>
     </>
