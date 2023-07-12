@@ -1,13 +1,11 @@
 import '../../styles/Forms.css'
 import '../../styles/Forms2.css'
 import {Inputs} from '../../components/Inputs.tsx'
-import {Button} from '../../components/Button.tsx'
 import {Link} from 'react-router-dom'
 import BackHome from '../../components/BackHome.tsx'
+import { Button } from '../../components/Button.tsx'
 
 export default function Login() {
-
-  const handleClick = () => {}
 
   return (
     <>

@@ -1,13 +1,14 @@
 import '../styles/Input.css'
-import { ReactNode, useState } from 'react'
+import React, {ReactNode, useState} from 'react'
 
 interface InputProps {
   name: string;
   children?: ReactNode;
   isPassword: boolean;
+  handleChange(fieldToChange: string): void;
 }
 
-export const Inputs = ({name, isPassword}: InputProps) => {
+export const Inputs = ({name, isPassword, handleChange}: InputProps) => {
 
   const [showPass, setShowPass] = useState(false)
 
@@ -16,6 +17,11 @@ export const Inputs = ({name, isPassword}: InputProps) => {
   }
 
   const [isEmpty, setIsEmpty] = useState(true)
+
+  const hasChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const el = e.currentTarget.value;
+    handleChange(el);
+  }
 
   const hasVal = (e: React.FormEvent<HTMLInputElement>) => {
     const el = e.currentTarget.value;
@@ -48,7 +54,8 @@ export const Inputs = ({name, isPassword}: InputProps) => {
             onChange={hasVal}
             className={isEmpty ? 'input100' : 'input100 has-val'} 
             type={showPass ? 'text' : 'password'} 
-            name={name} 
+            name={name}
+            onBlur={hasChange}
           />
           <span 
             className="focus-input100" 
@@ -62,7 +69,8 @@ export const Inputs = ({name, isPassword}: InputProps) => {
             onChange={hasVal}
             className={isEmpty ? 'input100' : 'input100 has-val'} 
             type='text' 
-            name={name} 
+            name={name}
+            onBlur={hasChange}
           />
           <span 
             className="focus-input100" 

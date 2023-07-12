@@ -1,11 +1,11 @@
-import {PropsWithChildren, useMemo, useState} from "react";
-import { UserRegisterContext } from "./Context";
+import React, {PropsWithChildren, useMemo, useState} from 'react';
+import {UserRegisterContext} from "./Context.tsx";
 import {useNavigate} from "react-router-dom";
 import {useAuthService} from "../../../service/api/auth.service.ts";
 import {IUserRegister} from "../../../types/models";
 import {userRegisterInitialState} from "./types.ts";
 
-import { toast } from "react-toastify";
+import {toast} from "react-toastify";
 
 const UserRegistrationProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const api = useAuthService();
@@ -27,8 +27,7 @@ const UserRegistrationProvider: React.FC<PropsWithChildren> = ({ children }) => 
         const objectToSave: IUserRegister = {
             ...userToRegister,
         }
-
-        objectToSave.name = newName;
+        objectToSave.name = newName
 
         setUserToRegister({
             ...objectToSave,
@@ -73,15 +72,16 @@ const UserRegistrationProvider: React.FC<PropsWithChildren> = ({ children }) => 
 
     const context = useMemo(() => ({
         handleSave,
-        userToRegister,
         handleChangeName,
         handleChangeCPF,
         handleChangePassword,
         handleChangeConfirmPassword,
-    }),[userToRegister]);
+    }),[]);
     return (
         <UserRegisterContext.Provider value={context} >
             {children}
         </UserRegisterContext.Provider>
     );
 }
+
+export default UserRegistrationProvider;
