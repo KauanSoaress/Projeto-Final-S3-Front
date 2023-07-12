@@ -1,19 +1,20 @@
-import '../styles/CartCards.css'
+import '../styles/ConfirmPurchaseCard.css'
 
-interface CartCardsProps {
+interface ConfirmPurchaseCardProps {
     priceProduct: number;
 }
 
-export const CartCards = ({priceProduct}: CartCardsProps) => {
+export const ConfirmPurchaseCard = ({priceProduct}: ConfirmPurchaseCardProps) => {
     return (
         <>
-        <div className="products-cart-container">
-            <div className="priceProduct">
-                Resumo do pedido
-                Total: R${priceProduct}
+            <div className="price-product">
+                <p>Resumo do pedido</p>
+                <p className='total'>
+                    Total: R$
+                    {priceProduct}
+                </p>
                 <button>Finalizar</button>
             </div>
-        </div>
         </>
     )
 }

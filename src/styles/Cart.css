@@ -1,3 +1,8 @@
+.cart-container {
+    display: flex;
+    margin-top: 2rem;
+}
+
 .cart-cards-container{
-    margin: 2rem 2rem 0rem 12rem;
+    margin: 0 2rem 0rem 12rem;
 }
