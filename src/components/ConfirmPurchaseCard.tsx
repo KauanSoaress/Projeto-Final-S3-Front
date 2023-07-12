@@ -1,4 +1,5 @@
 import '../styles/ConfirmPurchaseCard.css'
+import { Link } from 'react-router-dom'
 
 interface ConfirmPurchaseCardProps {
     priceProduct: number;
@@ -13,7 +14,7 @@ export const ConfirmPurchaseCard = ({priceProduct}: ConfirmPurchaseCardProps) =>
                     Total: R$
                     {priceProduct}
                 </p>
-                <button>Finalizar</button>
+                <Link to='/finished-order'>Finalizar</Link>
             </div>
         </>
     )

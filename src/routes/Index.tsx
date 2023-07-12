@@ -4,6 +4,7 @@ import Login from '../pages/login/index'
 import Register from '../pages/register/index'
 import Menu from '../pages/menu/index'
 import Cart from '../pages/cart/index'
+import FinishedOrder from '../pages/finished-order/index'
 
 export const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ export const AppRoutes = () => {
       <Route path="/register" element={<Register/>}/>
       <Route path="/menu" element={<Menu/>}/>
       <Route path="/cart" element={<Cart/>}/>
+      <Route path="/finished-order" element={<FinishedOrder/>}/>
 
       <Route path='*' element={<Navigate to="/home"/>}/>
     </Routes>

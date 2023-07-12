@@ -1,0 +1,20 @@
+.finishMessage {
+  border-radius: 0.9375rem;
+  background: #FFF;
+  position: absolute;
+  width: 30.5rem;
+  height: 16.125rem;
+
+  color: #000;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}

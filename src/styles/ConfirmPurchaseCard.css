@@ -36,14 +36,17 @@
   line-height: normal;
 }
 
-.price-product button {
+.price-product a {
   width: 12rem;
   height: 4rem;
   background: #F2F2F2;
   border-radius: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   color: #000;
-  text-align: center;
   font-family: Louis George Cafe;
   font-size: 2rem;
   font-style: italic;
