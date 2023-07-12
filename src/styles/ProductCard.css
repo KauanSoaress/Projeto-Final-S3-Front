@@ -10,14 +10,19 @@
   padding: 0 3rem 0 3rem;
 }
 
-.product img {
+.product .pizzaOrCombo {
+  width: 6rem;
+}
+
+.product .otherProducts {
   width: 3rem;
 }
 
 .left {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
+  width: 30rem;
 }
 
 .product-name, .product-description, .product-price  {

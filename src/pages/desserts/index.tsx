@@ -10,9 +10,11 @@ export default function Desserts () {
       <NavBar />
       <PageTitle>Sobremesas</PageTitle>
 
-      <ProductCard productImg="MilkshakeChocolate.svg" productName="Milkshake de Chocolate" productDescription="" productPrice="15,90" />
-      <ProductCard productImg="MilkshakeBaunilha.svg" productName="Milkshake de Baunilha" productDescription="" productPrice="15,90" />
-      <ProductCard productImg="Brownie.svg" productName="Brownie" productDescription="" productPrice="5,90" />
+      <ProductCard isPizzaOrCombo={false} productImg="MilkshakeChocolate.svg" productName="Milkshake de Chocolate" productDescription="Delicioso milkshake de chocolate com chantilly e calda" productPrice="15,90" />
+      <ProductCard isPizzaOrCombo={false} productImg="MilkshakeBaunilha.svg" productName="Milkshake de Baunilha" productDescription="Delicioso milkshake de baunilha com chantilly e calda" productPrice="15,90" />
+      <ProductCard isPizzaOrCombo={false} productImg="Brownie.svg" productName="Brownie" productDescription="Delicioso brownie com recheio de chocolate" productPrice="5,90" />
+    
+      <br />
     </>   
   ) 
 }

@@ -10,9 +10,11 @@ export default function Drinks () {
       <NavBar />
       <PageTitle>Bebidas</PageTitle>
 
-      <ProductCard productImg="Pepsi.svg" productName="Pepsi 2L" productDescription="" productPrice="13,90" />
-      <ProductCard productImg="Coca.svg" productName="Coca 2L" productDescription="" productPrice="14,90" />
-      <ProductCard productImg="Guarana.svg" productName="Guarana 2L" productDescription="" productPrice="13,90" />
+      <ProductCard isPizzaOrCombo={false} productImg="Pepsi.svg" productName="Pepsi 2L" productDescription="Refrigerante geladinho de 2L" productPrice="13,90" />
+      <ProductCard isPizzaOrCombo={false} productImg="Coca.svg" productName="Coca 2L" productDescription="Refrigerante geladinho de 2L" productPrice="14,90" />
+      <ProductCard isPizzaOrCombo={false} productImg="Guarana.svg" productName="Guarana 2L" productDescription="Refrigerante geladinho de 2L" productPrice="13,90" />
+    
+      <br />
     </>
   )
 }
