@@ -3,7 +3,7 @@ import { PageTitle } from '../../components/PageTitle.tsx'
 import '../../styles/Menu.css'
 
 
-export default function Home () {
+export default function Pizzas () {
   return (
     <>
       <NavBar />
