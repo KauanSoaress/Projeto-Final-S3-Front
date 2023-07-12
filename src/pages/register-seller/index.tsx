@@ -5,7 +5,7 @@ import {Inputs} from '../../components/Inputs.tsx'
 import {Button} from '../../components/Button.tsx'
 import BackHome from '../../components/BackHome.tsx'
 
-export default function Register () {
+export default function RegisterSellers () {
   return (
     <>
       <BackHome />
@@ -23,7 +23,7 @@ export default function Register () {
 
                 <Inputs name="CPF" isPassword={false}/>
 
-                <Inputs name="E-mail" isPassword={false}/>
+                <Inputs name="Cargo" isPassword={false}/>
 
                 <Inputs name="Senha" isPassword={true}/>
 
