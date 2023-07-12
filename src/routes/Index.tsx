@@ -5,6 +5,9 @@ import Register from '../pages/register/index'
 import Menu from '../pages/menu/index'
 import Cart from '../pages/cart/index'
 import FinishedOrder from '../pages/finished-order/index'
+import Drinks from '../pages/drinks/index'
+import Pizzas from '../pages/pizzas/index'
+import Desserts from '../pages/desserts/index'
 
 export const AppRoutes = () => {
   return (
@@ -15,6 +18,9 @@ export const AppRoutes = () => {
       <Route path="/menu" element={<Menu/>}/>
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/finished-order" element={<FinishedOrder/>}/>
+      <Route path="/drinks" element={<Drinks/>}/>
+      <Route path="/pizzas" element={<Pizzas/>}/>
+      <Route path="/desserts" element={<Desserts/>}/>
 
       <Route path='*' element={<Navigate to="/home"/>}/>
     </Routes>

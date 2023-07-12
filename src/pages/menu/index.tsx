@@ -1,5 +1,5 @@
 import NavBar from '../../components/NavBar'
-import { PromotionCard } from '../../components/PromotionCard.tsx'
+import { Card } from '../../components/Card.tsx'
 import { PageTitle } from '../../components/PageTitle.tsx'
 import '../../styles/Menu.css'
 
@@ -10,9 +10,9 @@ export default function Home () {
       <NavBar />
       <PageTitle>Cardápio</PageTitle>
       <div className="cards">
-        <PromotionCard img="pizzas.svg"/>
-        <PromotionCard img="bebidas.svg"/>
-        <PromotionCard img="sobremesas.svg"/>
+        <Card link="/pizzas" img="pizzas.svg"/>
+        <Card link="/drinks" img="bebidas.svg"/>
+        <Card link="/desserts " img="sobremesas.svg"/>
       </div>
     </>
   )
