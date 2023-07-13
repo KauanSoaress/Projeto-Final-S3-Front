@@ -29,7 +29,7 @@ export const AppRoutes = () => {
       <Route path="/register-seller" element={<RegisterSellers/>}/>
       <Route path="/register-product" element={<RegisterProduct/>}/>
       <Route path="/products-list" element={<ProductsList/>}/>
-
+      
       <Route path='*' element={<Navigate to="/home"/>}/>
     </Routes>
   );

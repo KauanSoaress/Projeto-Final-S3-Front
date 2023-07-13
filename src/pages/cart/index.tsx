@@ -7,7 +7,7 @@ import { ConfirmPurchaseCard } from '../../components/ConfirmPurchaseCard.tsx'
 export default function Cart(){ 
   return (
     <>
-      <NavBar isLogged={false}/>
+      <NavBar isLogged={true} isManager={false} isSeller={false}/>
       <PageTitle>Meu Carrinho</PageTitle>
       <div className="cart-container">
         <div className="cart-cards-container">

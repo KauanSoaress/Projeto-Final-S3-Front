@@ -7,10 +7,10 @@ import {RegisterButton} from '../../components/RegisterButton.tsx'
 export default function Sellers(){
     return (
         <>
-          <NavBar isLogged={false}/>
+          <NavBar isLogged={true} isManager={true} isSeller={true}/>
           <PageTitle>Vendedores</PageTitle>
           <div className='sellers-container'>
-            <RegisterButton link = '/'>Cadastrar Vendedor</RegisterButton>
+            <RegisterButton link='/register-seller'>Cadastrar Vendedor</RegisterButton>
             <SellerCards sellerName='João Sousa da Silva' />
             <SellerCards sellerName='Maria do Socorro' />
             <SellerCards sellerName='Ana Francisca' />

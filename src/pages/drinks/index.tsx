@@ -13,7 +13,7 @@ export default function Drinks () {
 
   return (
     <>
-      <NavBar isLogged={false}/>
+      <NavBar isLogged={true} isManager={false} isSeller={false}/>
       <PageTitle>Bebidas</PageTitle>
 
       {

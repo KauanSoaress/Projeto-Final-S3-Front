@@ -16,7 +16,7 @@ export default function RegisterSellers () {
             <div className="wrap-login100">
               <form className="login100-form validate-form">
                 <span className="login100-form-title p-b-26">
-                  Cadastre-se
+                  Registrar Vendedor
                 </span>
                 
                 <Inputs name="Nome" isPassword={false}/>
