@@ -4,9 +4,73 @@ import '../../styles/Forms2.css'
 import {Inputs} from '../../components/Inputs.tsx'
 import {Button} from '../../components/Button.tsx'
 import BackHome from '../../components/BackHome.tsx'
+import { ISellerInitialState } from '../../types/common/ISellerInitialState.ts'
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { IUserRegister } from '../../types/models/IUserRegister.ts'
+import { UserArray } from '../../service/arrays/UserArray.ts'
+
 
 export default function RegisterSellers () {
+  const navigate = useNavigate();
+  const[userToRegister, setUserToRegister] = useState<IUserRegister>(ISellerInitialState);
+  const UsersArray: IUserRegister[] = UserArray;
+
+  function handleChangeName(newName: string){
+    const objectToSave: IUserRegister = {
+      ...userToRegister,
+    }
+    objectToSave.name = newName
+
+    setUserToRegister({
+      ...objectToSave,
+    })
+  }
+
+  function handleChangeCPF(newCPF: string){
+    const objectToSave: IUserRegister = {
+      ...userToRegister,
+    }
+
+    objectToSave.cpf = newCPF;
+
+    setUserToRegister({
+      ...objectToSave,
+    })
+  }
+
+  function handleChangePassword(newPassword: string){
+    const objectToSave: IUserRegister = {
+      ...userToRegister,
+    }
+
+    objectToSave.password = newPassword;
+
+    setUserToRegister({
+      ...objectToSave,
+    })
+  }
+
+  function handleChangeCargo(newCargo: string){
+    const objectToSave: IUserRegister = {
+      ...userToRegister,
+    }
+
+    objectToSave.role = newCargo;
+
+    setUserToRegister({
+      ...objectToSave,
+    })
+  }
+
+  function handleSave(){
+    UsersArray.push(userToRegister);
+    console.log(UsersArray);
+    navigate('/sellers');
+  }
+
   return (
+    
     <>
       <BackHome />
 
@@ -19,15 +83,15 @@ export default function RegisterSellers () {
                   Registrar Vendedor
                 </span>
                 
-                <Inputs name="Nome" isPassword={false}/>
+                <Inputs name="Nome" isPassword={false} handleChange={handleChangeName}/>
 
-                <Inputs name="CPF" isPassword={false}/>
+                <Inputs name="CPF" isPassword={false} handleChange={handleChangeCPF}/>
 
-                <Inputs name="Cargo" isPassword={false}/>
+                <Inputs name="Cargo" isPassword={false} handleChange={handleChangeCargo}/>
 
-                <Inputs name="Senha" isPassword={true}/>
+                <Inputs name="Senha" isPassword={true} handleChange={handleChangePassword}/>
 
-                <Button>Cadastrar</Button>
+                <Button onClick={handleSave}>Cadastrar</Button>
                 
               </form>
             </div>
