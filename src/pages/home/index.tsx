@@ -5,7 +5,7 @@ import { HomeCards } from '../../components/HomeCards'
 export default function Home () {
   return (
     <>
-      <HomeNav isLogged={true} isManager={false} isSeller={false}/>
+      <HomeNav isLogged={true} isManager={true} isSeller={false}/>
       <h1>Promoções</h1>
       <div className="carousel">
         <HomeCards img="promo1.svg"/>

@@ -26,7 +26,7 @@ export const HomeNav = ({isLogged, isSeller, isManager}: HomeNavProps) => {
                 <>
                   <Link className="navbarCategories hover-underline-animation" to="/sellers">Vendedores</Link>
                   <Link className="navbarCategories hover-underline-animation" to="/products-list">Produtos</Link>
-                  <Link className="navbarCategories hover-underline-animation" to="/">Vendas</Link>
+                  <Link className="navbarCategories hover-underline-animation" to="/sales-list">Vendas</Link>
                 </>
               :
                 <Link className="navbarCategories hover-underline-animation" to="/menu">Cardápio</Link>

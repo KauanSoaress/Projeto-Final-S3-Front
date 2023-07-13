@@ -12,6 +12,7 @@ import Sellers from '../pages/sellers/index'
 import RegisterSellers from '../pages/register-seller/index'
 import RegisterProduct from '../pages/register-product/index'
 import ProductsList from '../pages/products-list/index'
+import SalesList from '../pages/sales-list/index'
 
 export const AppRoutes = () => {
   return (
@@ -29,6 +30,7 @@ export const AppRoutes = () => {
       <Route path="/register-seller" element={<RegisterSellers/>}/>
       <Route path="/register-product" element={<RegisterProduct/>}/>
       <Route path="/products-list" element={<ProductsList/>}/>
+      <Route path="/sales-list" element={<SalesList/>}/>
       
       <Route path='*' element={<Navigate to="/home"/>}/>
     </Routes>
