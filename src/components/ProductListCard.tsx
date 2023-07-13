@@ -25,8 +25,6 @@ export const ProductListCard = ({isPizzaOrCombo, productImg, productName, produc
           <div className="product-list-price">
             R${productPrice}
           </div>
-
-          <img src="Lixeira.svg" alt="Lixeira" />
         </div>
 
       </div>
