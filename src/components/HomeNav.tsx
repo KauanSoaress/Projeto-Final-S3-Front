@@ -1,7 +1,12 @@
 import '../styles/HomeNav.css'
 import { Link } from 'react-router-dom'
 
-export default function NavBar() {
+
+interface HomeNavProps {
+  isLogged: boolean;
+}
+
+export const HomeNav = ({isLogged}: HomeNavProps) => {
   return (
     <>
       {/* Div para a navbar da home */}
@@ -16,13 +21,17 @@ export default function NavBar() {
 
           </div>
           <div className="right-side">
-            <Link className="navbarCategories user" to="/login">
-              <img src="User.svg" alt="User image" />
-              <p className='text hover-underline-animation'>FAZER LOGIN<br/>ou CADASTRAR-SE</p>
+            <Link className="navbarCategories user" to="/profile" >
+              <img src="User.svg" alt="User image"  hidden={!isLogged}/>
             </Link>
-            <Link to="/cart">
+            <Link className="navbarCategories user" to="/login" >
+              <img src="User.svg" alt="User image"  hidden={isLogged}/>
+              <p className={isLogged ? "text" : "text hover-underline-animation"} hidden={isLogged}>FAZER LOGIN<br/>ou CADASTRAR-SE</p>
+            </Link>
+            <Link to="/cart" hidden={!isLogged}>
               <img src="Cart.svg" alt="Cart image" />
             </Link>
+            <p className={isLogged ? "hover-underline-animation out" : ""} hidden={!isLogged}>Sair</p>
           </div>
         </div>
 

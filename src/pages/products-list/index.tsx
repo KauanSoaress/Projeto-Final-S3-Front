@@ -1,5 +1,5 @@
 import '../../styles/ProductsList.css'
-import NavBar from '../../components/NavBar.tsx'
+import {NavBar} from '../../components/NavBar.tsx'
 import {PageTitle} from '../../components/PageTitle.tsx'
 import {RegisterButton} from '../../components/RegisterButton.tsx'
 import {ProductListCard} from '../../components/ProductListCard.tsx'
@@ -7,7 +7,7 @@ import {ProductListCard} from '../../components/ProductListCard.tsx'
 export default function ProductsList(){
   return (
     <>
-      <NavBar />
+      <NavBar isLogged={false}/>
       <PageTitle>Produtos</PageTitle>
       <div className="products-list-container">
         <RegisterButton link = '/'>Cadastrar Produto</RegisterButton>

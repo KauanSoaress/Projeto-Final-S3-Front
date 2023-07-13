@@ -1,4 +1,4 @@
-import NavBar from '../../components/NavBar'
+import {NavBar} from '../../components/NavBar'
 import { PageTitle } from '../../components/PageTitle.tsx'
 import { ProductCard } from '../../components/ProductCard.tsx'
 import '../../styles/Menu.css'
@@ -7,7 +7,7 @@ import '../../styles/Menu.css'
 export default function Drinks () {
   return (
     <>
-      <NavBar />
+      <NavBar isLogged={false}/>
       <PageTitle>Bebidas</PageTitle>
 
       <ProductCard isPizzaOrCombo={false} productImg="Pepsi.svg" productName="Pepsi 2L" productDescription="Refrigerante geladinho de 2L" productPrice="13,90" />

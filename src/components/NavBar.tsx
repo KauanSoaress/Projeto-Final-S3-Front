@@ -1,7 +1,11 @@
 import '../styles/NavBar.css'
 import { Link } from 'react-router-dom'
 
-export default function NavBar() {
+interface NavBarProps {
+  isLogged: boolean;
+}
+
+export const NavBar = ({isLogged}: NavBarProps) => {
   return (
     <>
       <div className="container-navbar">
@@ -11,18 +15,22 @@ export default function NavBar() {
           </Link>
 
           <Link className="navbarCategories hover-underline-animation" to="/menu">Cardápio</Link>
-
         </div>
+
         <div className="right-side">
-          <Link className="navbarCategories user" to="/login">
-            <img src="User.svg" alt="User image" />
-            <p className='text hover-underline-animation'>FAZER LOGIN<br/>ou CADASTRAR-SE</p>
+          <Link className="navbarCategories user" to="/profile" >
+            <img src="User.svg" alt="User image"  hidden={!isLogged}/>
           </Link>
-          <Link to="/cart">
+          <Link className="navbarCategories user" to="/login" >
+            <img src="User.svg" alt="User image"  hidden={isLogged}/>
+            <p className={isLogged ? "" : "text hover-underline-animation"} hidden={isLogged}>FAZER LOGIN<br/>ou CADASTRAR-SE</p>
+          </Link>
+          <Link to="/cart" hidden={!isLogged}>
             <img src="Cart.svg" alt="Cart image" />
           </Link>
+          <p className={isLogged ? "hover-underline-animation out" : ""} hidden={!isLogged}>Sair</p>
         </div>
-      </div>
+      </div>      
     </>
   )
 }

@@ -1,4 +1,4 @@
-import NavBar from '../../components/NavBar'
+import {NavBar} from '../../components/NavBar'
 import { PageTitle } from '../../components/PageTitle.tsx'
 import { ProductCard } from '../../components/ProductCard.tsx'
 import '../../styles/Menu.css'
@@ -7,7 +7,7 @@ import '../../styles/Menu.css'
 export default function Pizzas () {
   return (
     <>
-      <NavBar />
+      <NavBar isLogged={false}/>
       <PageTitle>Promoções</PageTitle>
       <ProductCard isPizzaOrCombo={true} productImg="Combo1.svg" productName="1 pizza + refri 2L" productDescription="1 pizza de camarão e Coca-Cola 2L " productPrice="39,90" />
       <ProductCard isPizzaOrCombo={true} productImg="Combo2.svg" productName="2 pizzas salgadas" productDescription="1 pizza de calabresa e 1 pizza de camarão" productPrice="64,90" />

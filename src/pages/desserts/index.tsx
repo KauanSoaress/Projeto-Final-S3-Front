@@ -1,4 +1,4 @@
-import NavBar from '../../components/NavBar'
+import {NavBar} from '../../components/NavBar'
 import { PageTitle } from '../../components/PageTitle.tsx'
 import '../../styles/Menu.css'
 import { ProductCard } from '../../components/ProductCard.tsx'
@@ -7,7 +7,7 @@ import { ProductCard } from '../../components/ProductCard.tsx'
 export default function Desserts () {
   return (
     <>
-      <NavBar />
+      <NavBar isLogged={false}/>
       <PageTitle>Sobremesas</PageTitle>
 
       <ProductCard isPizzaOrCombo={false} productImg="MilkshakeChocolate.svg" productName="Milkshake de Chocolate" productDescription="Delicioso milkshake de chocolate com chantilly e calda" productPrice="15,90" />
