@@ -5,23 +5,67 @@ import '../../styles/Menu.css'
 
 
 export default function Pizzas () {
+  let combosArray: string[][] = [
+    ["Combo1.svg", "1 pizza + refri 2L", "1 pizza de camarão e Coca-Cola 2L", "39,90"],
+    ["Combo2.svg", "2 pizzas salgadas", "1 pizza de calabresa e 1 pizza de camarão", "64,90"],
+    ["Combo3.svg", "1 pizza salgada + 1 doce", "1 pizza de calabresa e 1 pizza de chocolate", "49,90"],
+  ];
+
+  let pizzasSalgadasArray: string[][] = [
+    ["PizzaCogumelo.svg", "Pizza de Cogumelo", "Cogumelo, azeitonas, tomate, cebolinha", "34,90"],
+    ["PizzaCalabresa.svg", "Pizza de Calabresa", "Calabresa, mussarela", "34,90"],
+    ["PizzaCamarao.svg", "Pizza de Camarão", "Camarão, mussarela, milho", "34,90"],
+  ];
+
+  let pizzasDocesArray: string[][] = [
+    ["PizzaChocolate.svg", "Pizza de Chocolate", "Chocolate", "34,90"],
+    ["PizzaMEMs.svg", "Pizza de M&Ms", "Chocolate, M&M ’s", "34,90"],
+  ];
+
+
   return (
     <>
       <NavBar isLogged={false}/>
       <PageTitle>Promoções</PageTitle>
-      <ProductCard isPizzaOrCombo={true} productImg="Combo1.svg" productName="1 pizza + refri 2L" productDescription="1 pizza de camarão e Coca-Cola 2L " productPrice="39,90" />
-      <ProductCard isPizzaOrCombo={true} productImg="Combo2.svg" productName="2 pizzas salgadas" productDescription="1 pizza de calabresa e 1 pizza de camarão" productPrice="64,90" />
-      <ProductCard isPizzaOrCombo={true} productImg="Combo3.svg" productName="1 pizza salgada + 1 doce" productDescription="1 pizza de calabresa e 1 pizza de chocolate" productPrice="49,90" />
+      {
+        combosArray.map((element) => (
+          <ProductCard 
+            key={element[1]} 
+            isPizzaOrCombo={true} 
+            productImg={element[0]} 
+            productName={element[1]} 
+            productDescription={element[2]} 
+            productPrice={element[3]} 
+          />
+        ))
+      } 
 
       <PageTitle>Pizzas Salgadas</PageTitle>
-      <ProductCard isPizzaOrCombo={true} productImg="PizzaCogumelo.svg" productName="Pizza de Cogumelo" productDescription="Cogumelo, azeitonas, tomate, cebolinha" productPrice="34,90" />
-      <ProductCard isPizzaOrCombo={true} productImg="PizzaCalabresa.svg" productName="Pizza de Calabresa" productDescription="Calabresa, mussarela" productPrice="34,90" />
-      <ProductCard isPizzaOrCombo={true} productImg="PizzaCamarao.svg" productName="Pizza de Camarão" productDescription="Camarão, mussarela, milho" productPrice="34,90" />
-      
+      {
+        pizzasSalgadasArray.map((element) => (
+          <ProductCard 
+            key={element[1]} 
+            isPizzaOrCombo={true} 
+            productImg={element[0]} 
+            productName={element[1]} 
+            productDescription={element[2]} 
+            productPrice={element[3]} 
+          />
+        ))
+      }  
       <PageTitle>Pizzas Doces</PageTitle>
-      <ProductCard isPizzaOrCombo={true} productImg="PizzaChocolate.svg" productName="Pizza de Chocolate" productDescription="Chocolate" productPrice="34,90" />
-      <ProductCard isPizzaOrCombo={true} productImg="PizzaMEMs.svg" productName="Pizza de M&Ms" productDescription="Chocolate, M&M ’s" productPrice="34,90" />
-
+      {
+        pizzasDocesArray.map((element) => (
+          <ProductCard 
+            key={element[1]} 
+            isPizzaOrCombo={true} 
+            productImg={element[0]} 
+            productName={element[1]} 
+            productDescription={element[2]} 
+            productPrice={element[3]} 
+          />
+        ))
+      }  
       <br />
     </>
   )
