@@ -10,6 +10,7 @@ import {IUserRegister} from "../../types/models";
 import {UserArray} from "../../service/arrays/UserArray.ts";
 import {IUserInitialState} from "../../types/common/IUserInitialState.ts";
 
+
 export default function Register () {
 
   const navigate = useNavigate();
