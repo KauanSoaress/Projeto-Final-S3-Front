@@ -1,13 +1,11 @@
 import '../styles/NavBar.css'
 import { Link } from 'react-router-dom'
+import {UserLogged} from "../service/arrays/UserLogged.ts";
 
-interface NavBarProps {
-  isLogged: boolean;
-  isSeller: boolean;
-  isManager: boolean;
-}
+export const NavBar = () => {
 
-export const NavBar = ({isLogged, isSeller, isManager}: NavBarProps) => {
+  let userLogged = UserLogged;
+
   return (
     <>
       <div className="container-navbar">
@@ -17,7 +15,7 @@ export const NavBar = ({isLogged, isSeller, isManager}: NavBarProps) => {
           </Link>
 
           {
-              isSeller || isManager
+              userLogged && (userLogged.role == 'VENDEDOR' || userLogged.role == 'GERENTE')
               ?
                 <>
                   <Link className="navbarCategories hover-underline-animation" to="/sellers">Vendedores</Link>
@@ -31,11 +29,11 @@ export const NavBar = ({isLogged, isSeller, isManager}: NavBarProps) => {
 
         <div className="right-side">
           {
-            isLogged 
+            userLogged
             ?
               <>
                 {
-                  isSeller || isManager
+                  (userLogged.role == 'VENDEDOR' || userLogged.role == 'GERENTE')
                   ?
                   <></>
                   :

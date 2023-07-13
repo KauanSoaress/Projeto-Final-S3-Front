@@ -14,7 +14,7 @@ export default function ProductsList(){
 
   return (
     <>
-      <NavBar isLogged={true} isManager={true} isSeller={true}/>
+      <NavBar />
       <PageTitle>Produtos</PageTitle>
       <div className="products-list-container">
         <RegisterButton link='/register-product'>Cadastrar Produto</RegisterButton>

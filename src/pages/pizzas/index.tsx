@@ -25,7 +25,7 @@ export default function Pizzas () {
 
   return (
     <>
-      <NavBar isLogged={true} isManager={false} isSeller={false}/>
+      <NavBar />
       <PageTitle>Promoções</PageTitle>
       {
         combosArray.map((element) => (

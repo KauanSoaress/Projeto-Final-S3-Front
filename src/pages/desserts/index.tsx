@@ -12,7 +12,7 @@ export default function Desserts () {
   ];
   return (
     <>
-      <NavBar isLogged={true} isManager={false} isSeller={false}/>
+      <NavBar />
       <PageTitle>Sobremesas</PageTitle>
 
       {

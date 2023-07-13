@@ -31,7 +31,7 @@ export default function SalesListByDate(){
 
   return (
     <>
-      <NavBar isLogged={true} isManager={true} isSeller={true}/>
+      <NavBar />
       <PageTitle>Vendas</PageTitle>
       <div className="filter">
         <p>Filtrar por:</p>

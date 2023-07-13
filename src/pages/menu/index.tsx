@@ -7,7 +7,7 @@ import '../../styles/Menu.css'
 export default function Home () {
   return (
     <>
-      <NavBar isLogged={true} isManager={false} isSeller={false}/>
+      <NavBar />
       <PageTitle>Cardápio</PageTitle>
       <div className="cards">
         <Card link="/pizzas" img="pizzas.svg"/>
