@@ -1,0 +1,45 @@
+.sale-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 2.5rem;
+  background: #FAFAFA;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+
+  width: 50rem;
+}
+
+.sale-card-container p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.head, .main, .footer{
+  display: flex;
+  margin: 1rem;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.main {
+  flex-direction: column;
+  margin: 0;
+}
+
+.main div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15rem;
+}

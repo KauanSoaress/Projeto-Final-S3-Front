@@ -1,4 +1,4 @@
-import NavBar from '../../components/NavBar'
+import {NavBar} from '../../components/NavBar'
 import { Card } from '../../components/Card.tsx'
 import { PageTitle } from '../../components/PageTitle.tsx'
 import '../../styles/Menu.css'
@@ -7,7 +7,7 @@ import '../../styles/Menu.css'
 export default function Home () {
   return (
     <>
-      <NavBar />
+      <NavBar isLogged={true} isManager={false} isSeller={false}/>
       <PageTitle>Cardápio</PageTitle>
       <div className="cards">
         <Card link="/pizzas" img="pizzas.svg"/>

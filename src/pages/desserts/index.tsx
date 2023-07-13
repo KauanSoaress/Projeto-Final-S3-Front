@@ -1,18 +1,34 @@
-import NavBar from '../../components/NavBar'
+import {NavBar} from '../../components/NavBar'
 import { PageTitle } from '../../components/PageTitle.tsx'
 import '../../styles/Menu.css'
 import { ProductCard } from '../../components/ProductCard.tsx'
 
 
 export default function Desserts () {
+  let dessertsArray: string[][] = [
+    ["MilkshakeChocolate.svg", "Milkshake de Chocolate", "elicioso milkshake de chocolate com chantilly e calda", "15,90"],
+    ["MilkshakeBaunilha.svg", "Milkshake de Baunilha", "Delicioso milkshake de baunilha com chantilly e calda", "15,90"],
+    ["Brownie.svg", "Brownie", "Delicioso brownie com recheio de chocolate", "5,90"],
+  ];
   return (
     <>
-      <NavBar />
+      <NavBar isLogged={true} isManager={false} isSeller={false}/>
       <PageTitle>Sobremesas</PageTitle>
 
-      <ProductCard productImg="MilkshakeChocolate.svg" productName="Milkshake de Chocolate" productDescription="" productPrice="15,90" />
-      <ProductCard productImg="MilkshakeBaunilha.svg" productName="Milkshake de Baunilha" productDescription="" productPrice="15,90" />
-      <ProductCard productImg="Brownie.svg" productName="Brownie" productDescription="" productPrice="5,90" />
+      {
+        dessertsArray.map((element) => (
+          <ProductCard 
+            key={element[1]} 
+            isPizzaOrCombo={false} 
+            productImg={element[0]} 
+            productName={element[1]} 
+            productDescription={element[2]} 
+            productPrice={element[3]} 
+          />
+        ))
+      } 
+    
+      <br />
     </>   
   ) 
 }

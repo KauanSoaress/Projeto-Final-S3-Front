@@ -93,7 +93,7 @@ export default function Register () {
                 <Inputs name="Confirme sua senha" isPassword={true} handleChange={handleChangeConfirmPassword}/>
 
                 <Button onClick={handleSave}>Cadastrar</Button>
-                
+
               </form>
             </div>
           </div>

@@ -1,0 +1,6 @@
+.sellers-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  align-items: center;
+}

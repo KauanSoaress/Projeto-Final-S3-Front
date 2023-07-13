@@ -1,0 +1,25 @@
+.seller-container {
+  background: #D9D9D9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 70vw;
+  height: 130px;
+  padding: 0 3rem 0 3rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.seller-container p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: bold;
+  line-height: normal;
+}
+
+.seller-container img {
+  width: 50px;
+  height: 50px;
+}

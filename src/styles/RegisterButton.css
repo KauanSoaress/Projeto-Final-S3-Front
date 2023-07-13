@@ -1,0 +1,14 @@
+.register-button {
+    background: var(--degrade, linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(180deg, #FF003A 0%, #FF7900 100%));
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+    
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: normal;
+}

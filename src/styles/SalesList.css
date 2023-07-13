@@ -1,0 +1,43 @@
+.sales-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  margin: 2rem 0;
+}
+
+.filter input {
+  border: 1px solid;
+  border-radius: 0.5rem;
+  display: flex;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+.filter p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.tradeTypeFilter {
+  text-decoration: none;
+  background: #D9D9D9;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.tradeTypeFilter:hover {
+  background: #BFBFBF;
+  box-shadow: 0 0 0.5rem #BFBFBF;
+}

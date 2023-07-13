@@ -1,5 +1,5 @@
 import '../../styles/Cart.css'
-import NavBar from '../../components/NavBar.tsx'
+import {NavBar} from '../../components/NavBar.tsx'
 import {PageTitle} from '../../components/PageTitle.tsx'
 import { CartCards } from '../../components/CartCards.tsx'
 import { ConfirmPurchaseCard } from '../../components/ConfirmPurchaseCard.tsx'
@@ -7,7 +7,7 @@ import { ConfirmPurchaseCard } from '../../components/ConfirmPurchaseCard.tsx'
 export default function Cart(){ 
   return (
     <>
-      <NavBar />
+      <NavBar isLogged={true} isManager={false} isSeller={false}/>
       <PageTitle>Meu Carrinho</PageTitle>
       <div className="cart-container">
         <div className="cart-cards-container">

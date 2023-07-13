@@ -8,6 +8,12 @@ import FinishedOrder from '../pages/finished-order/index'
 import Drinks from '../pages/drinks/index'
 import Pizzas from '../pages/pizzas/index'
 import Desserts from '../pages/desserts/index'
+import Sellers from '../pages/sellers/index'
+import RegisterSellers from '../pages/register-seller/index'
+import RegisterProduct from '../pages/register-product/index'
+import ProductsList from '../pages/products-list/index'
+import SalesListByName from '../pages/sales-list-by-name/index'
+import SalesListByDate from '../pages/sales-list-by-date/index'
 
 export const AppRoutes = () => {
   return (
@@ -21,7 +27,13 @@ export const AppRoutes = () => {
       <Route path="/drinks" element={<Drinks/>}/>
       <Route path="/pizzas" element={<Pizzas/>}/>
       <Route path="/desserts" element={<Desserts/>}/>
-
+      <Route path="/sellers" element={<Sellers/>}/>
+      <Route path="/register-seller" element={<RegisterSellers/>}/>
+      <Route path="/register-product" element={<RegisterProduct/>}/>
+      <Route path="/products-list" element={<ProductsList/>}/>
+      <Route path="/sales-list-by-name" element={<SalesListByName/>}/>
+      <Route path="/sales-list-by-date" element={<SalesListByDate/>}/>
+      
       <Route path='*' element={<Navigate to="/home"/>}/>
     </Routes>
   );
