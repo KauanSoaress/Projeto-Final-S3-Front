@@ -23,7 +23,7 @@ export default function ProductsList(){
             <ProductListCard
               key={product[2]}
               isPizzaOrCombo={Boolean(product[0])}
-              productImg={product[1]}
+              productImg='PizzaCalabresa.svg'
               productName={product[2]}
               productDescription={product[3]}
               productPrice={product[4]}
