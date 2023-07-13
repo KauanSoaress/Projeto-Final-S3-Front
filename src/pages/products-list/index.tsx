@@ -5,16 +5,33 @@ import {RegisterButton} from '../../components/RegisterButton.tsx'
 import {ProductListCard} from '../../components/ProductListCard.tsx'
 
 export default function ProductsList(){
+
+  let productsArray: string[][] = [
+    ["true", "PizzaCalabresa.svg", "Pizza de Calabresa", "Calabresa, queijo e molho de tomate", "39,90"],
+    ["true", "PizzaCamarao.svg", "Pizza de Camarão", "Camarão, mussarela, milho", "39,90"],
+    ["true", "PizzaCalabresa.svg", "Pizza de Calabresa", "Calabresa, mussarela", "39,90"],
+  ];
+
   return (
     <>
       <NavBar isLogged={true} isManager={true} isSeller={true}/>
       <PageTitle>Produtos</PageTitle>
       <div className="products-list-container">
         <RegisterButton link='/register-product'>Cadastrar Produto</RegisterButton>
-        <ProductListCard isPizzaOrCombo={true} productImg='PizzaCalabresa.svg' productName='Pizza de Calabresa' productDescription='Calabresa, queijo e molho de tomate' productPrice='39,90' />
-        <ProductListCard isPizzaOrCombo={true} productImg='PizzaCamarao.svg' productName='Pizza de Camarão' productDescription='Camarão, mussarela, milho' productPrice='39,90' />
-        <ProductListCard isPizzaOrCombo={true} productImg='PizzaCalabresa.svg' productName='Pizza de Calabresa' productDescription='Calabresa, mussarela' productPrice='39,90' />
-      </div>
+        {
+          productsArray.map((product) => (
+            <ProductListCard
+              key={product[2]}
+              isPizzaOrCombo={Boolean(product[0])}
+              productImg={product[1]}
+              productName={product[2]}
+              productDescription={product[3]}
+              productPrice={product[4]}
+            />
+          )
+          )
+        }
+        </div>
     </>
   )
 }
