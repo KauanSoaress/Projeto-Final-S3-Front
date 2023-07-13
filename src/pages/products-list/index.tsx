@@ -11,9 +11,9 @@ export default function ProductsList(){
       <PageTitle>Produtos</PageTitle>
       <div className="products-list-container">
         <RegisterButton link='/register-product'>Cadastrar Produto</RegisterButton>
-        <ProductListCard isPizzaOrCombo={true} productImg='Pizza.png' productName='Pizza de Calabresa' productDescription='Calabresa, queijo e molho de tomate' productPrice='39,90' />
-        <ProductListCard isPizzaOrCombo={true} productImg='Pizza.png' productName='Pizza de Camarão' productDescription='Camarão, mussarela, milho' productPrice='39,90' />
-        <ProductListCard isPizzaOrCombo={true} productImg='Pizza.png' productName='Pizza de Calabresa' productDescription='Calabresa, mussarela' productPrice='39,90' />
+        <ProductListCard isPizzaOrCombo={true} productImg='PizzaCalabresa.svg' productName='Pizza de Calabresa' productDescription='Calabresa, queijo e molho de tomate' productPrice='39,90' />
+        <ProductListCard isPizzaOrCombo={true} productImg='PizzaCamarao.svg' productName='Pizza de Camarão' productDescription='Camarão, mussarela, milho' productPrice='39,90' />
+        <ProductListCard isPizzaOrCombo={true} productImg='PizzaCalabresa.svg' productName='Pizza de Calabresa' productDescription='Calabresa, mussarela' productPrice='39,90' />
       </div>
     </>
   )
