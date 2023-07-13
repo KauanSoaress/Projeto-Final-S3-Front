@@ -1,4 +1,4 @@
-import '../styles/ProductCard.css'
+import '../styles/ProductsListCard.css'
 
 interface ProductCardProps {
   productImg: string;
@@ -11,18 +11,18 @@ interface ProductCardProps {
 export const ProductListCard = ({isPizzaOrCombo, productImg, productName, productDescription, productPrice}: ProductCardProps) => {
   return (
     <>
-      <div className="product">
+      <div className="product-list">
 
-        <div className="left">
+        <div className="product-list-left">
           <img className={isPizzaOrCombo ? 'pizzaOrCombo' : 'otherProducts'} src={productImg} alt="Product" />
-          <div className="product-info">
-            <p className='product-name'>{productName}</p>
-            <p className='product-description'>{productDescription}</p>
+          <div className="product-list-info">
+            <p className='product-list-name'>{productName}</p>
+            <p className='product-list-description'>{productDescription}</p>
           </div>
         </div>
 
-        <div className="right">
-          <div className="product-price">
+        <div className="product-list-right">
+          <div className="product-list-price">
             R${productPrice}
           </div>
 
