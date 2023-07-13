@@ -22,7 +22,7 @@ export const NavBar = ({isLogged, isSeller, isManager}: NavBarProps) => {
                 <>
                   <Link className="navbarCategories hover-underline-animation" to="/sellers">Vendedores</Link>
                   <Link className="navbarCategories hover-underline-animation" to="/products-list">Produtos</Link>
-                  <Link className="navbarCategories hover-underline-animation" to="/sales-list">Vendas</Link>
+                  <Link className="navbarCategories hover-underline-animation" to="/sales-list-by-name">Vendas</Link>
                 </>
               :
                 <Link className="navbarCategories hover-underline-animation" to="/menu">Cardápio</Link>
@@ -34,9 +34,6 @@ export const NavBar = ({isLogged, isSeller, isManager}: NavBarProps) => {
             isLogged 
             ?
               <>
-                <Link className="navbarCategories user" to="/profile" >
-                  <img src="User.svg" alt="User image"/>
-                </Link>
                 {
                   isSeller || isManager
                   ?
