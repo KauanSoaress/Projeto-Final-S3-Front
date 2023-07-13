@@ -16,14 +16,14 @@ export default function SalesListByDate(){
   let sales = [
     [1, "Victoria", "08h41 - 12/05/2023", saleList],
     [2, "Bruna", "08h41 - 10/05/2023", saleList],
-    [3, "Kauan", "08h41 - 9/05/2023", saleList],
-    [4, "Erik", "08h41 - 2/05/2023", saleList],
-    [5, "Leonan", "08h41 - 2/05/2023", saleList],
-    [6, "Gustavo", "08h41 - 2/05/2023", saleList],
-    [7, "Beatriz", "08h41 - 2/05/2023", saleList],
-    [8, "Jean", "08h41 - 2/05/2023", saleList],
-    [9, "Guilherme", "08h41 - 2/05/2023", saleList],
-    [10, "Levy", "08h41 - 2/05/2023", saleList],
+    [3, "Kauan", "08h41 - 09/05/2023", saleList],
+    [4, "Erik", "08h41 - 02/05/2023", saleList],
+    [5, "Leonan", "08h41 - 02/05/2023", saleList],
+    [6, "Gustavo", "08h41 - 02/05/2023", saleList],
+    [7, "Beatriz", "08h41 - 02/05/2023", saleList],
+    [8, "Jean", "08h41 - 02/05/2023", saleList],
+    [9, "Guilherme", "08h41 - 02/05/2023", saleList],
+    [10, "Levy", "08h41 - 02/05/2023", saleList],
   ]
 
   const [searchDate, setSearchDate] = useState('');
@@ -36,12 +36,12 @@ export default function SalesListByDate(){
       <div className="filter">
         <p>Filtrar por:</p>
         <input type="search" placeholder="Data" value={searchDate} onChange={(e) => setSearchDate(e.target.value)}/>
-        <Link to="/sales-list-by-name">Trocar para pesquisa por nome</Link>
+        <Link to="/sales-list-by-name" className='tradeTypeFilter'>Trocar para pesquisa por nome</Link>
       </div>
       <div className="sales-list-container">
         {
           saleFilterDate.map((element) => (
-            <SaleCard saleNumber={Number(element[0])} sellerDate={String(element[1])} dateTime={String(element[2])} productsList={element[3]}/>
+            <SaleCard saleNumber={Number(element[0])} sellerName={String(element[1])} dateTime={String(element[2])} productsList={element[3]}/>
           ))
         }
       </div>
