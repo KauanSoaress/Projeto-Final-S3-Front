@@ -53,18 +53,6 @@ export default function Register () {
     })
   }
 
-  function handleChangeConfirmPassword(newConfirmPassword: string){
-    const objectToSave: IUserRegister = {
-      ...userToRegister,
-    }
-
-    objectToSave.confirmPassword = newConfirmPassword;
-
-    setUserToRegister({
-      ...objectToSave,
-    })
-  }
-
   function handleSave(){
     UsersArray.push(userToRegister);
     navigate('/home');
@@ -89,8 +77,6 @@ export default function Register () {
                 <Inputs name="CPF" isPassword={false} handleChange={handleChangeCPF}/>
 
                 <Inputs name="Senha" isPassword={true} handleChange={handleChangePassword}/>
-
-                <Inputs name="Confirme sua senha" isPassword={true} handleChange={handleChangeConfirmPassword}/>
 
                 <Button onClick={handleSave}>Cadastrar</Button>
 
