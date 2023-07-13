@@ -64,3 +64,8 @@
   border-radius: 1.57775rem;
   background: var(--degrade, linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(180deg, #FF003A 0%, #FF7900 100%));
 }
+
+.right img {
+  width: 3rem;
+  height: 3rem;
+}
