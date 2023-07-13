@@ -2,12 +2,6 @@ import '../styles/HomeNav.css'
 import { Link } from 'react-router-dom'
 import {UserLogged} from "../service/arrays/UserLogged.ts";
 
-interface HomeNavProps {
-  isLogged: boolean;
-  isSeller: boolean;
-  isManager: boolean;
-}
-
 export const HomeNav = () => {
 
   const userLogged = UserLogged;
