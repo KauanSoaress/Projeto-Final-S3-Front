@@ -4,19 +4,19 @@ import '../../styles/Forms2.css'
 import {Inputs} from '../../components/Inputs.tsx'
 import {Button} from '../../components/Button.tsx'
 import BackHome from '../../components/BackHome.tsx'
-import {toast} from "react-toastify";
-import {useAuthService} from "../../service/api/auth.service.ts";
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 import {IUserRegister} from "../../types/models";
-import {userRegisterInitialState} from "../../store/authentication/registration/types.ts";
+import {UserArray} from "../../service/arrays/UserArray.ts";
+import {IUserInitialState} from "../../types/common/IUserInitialState.ts";
 
 export default function Register () {
 
-  const api = useAuthService();
   const navigate = useNavigate();
 
-  const [userToRegister, setUserToRegister] = useState<IUserRegister>(userRegisterInitialState);
+  const [userToRegister, setUserToRegister] = useState<IUserRegister>(IUserInitialState);
+
+  const UsersArray: IUserRegister[] = UserArray;
 
   function handleChangeName(newName: string){
     const objectToSave: IUserRegister = {
@@ -66,13 +66,8 @@ export default function Register () {
   }
 
   function handleSave(){
-    api.register(userToRegister)
-        .then(() => {
-          toast.success("Cadastro finalizado com sucesso");
-        })
-        .finally(() => {
-          navigate("/home")
-        })
+    UsersArray.push(userToRegister);
+    navigate('/home');
   }
 
 

@@ -1,7 +1,7 @@
-export const userRegisterInitialState = {
+export const IUserInitialState = {
     name: "",
     cpf: "",
     password: "",
     confirmPassword: "",
-    role: "",
+    role: "CLIENTE",
 }
