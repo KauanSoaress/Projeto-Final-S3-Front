@@ -7,7 +7,7 @@ import {UserArray} from '../../service/arrays/UserArray.ts'
 
 
 export default function Sellers(){
-  const userArray = UserArray.filter((user) => user.role === 'Vendedor');
+  const userArray = UserArray.filter((user) => user.role.toLowerCase() === 'vendedor');
     return (
         <>
           <NavBar />
