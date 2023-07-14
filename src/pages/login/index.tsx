@@ -17,7 +17,7 @@ export default function Login() {
 
   const [userToAuth, setUserToAuth] = useState<IUserAuth>(IAuthInitialState);
 
-  let userLogged = UserLogged;
+  const userLogged = UserLogged;
 
   const UsersArray: IUserRegister[] = UserArray;
 
@@ -49,7 +49,7 @@ export default function Login() {
     const userLogin = UsersArray.find(user => user.cpf == userToAuth.cpf && user.password == userToAuth.password)
 
     if (userLogin != undefined) {
-      userLogged = userLogin;      
+      userLogged.UserLogged = userLogin;
       navigate('/home');
     } else {
       navigate('/login');

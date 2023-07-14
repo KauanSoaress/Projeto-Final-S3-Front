@@ -8,11 +8,14 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { IProduct, ProductArray } from '../../service/arrays/ProductArray.ts'
 import { IproductInicialState } from '../../types/common/IproductIniicialState.ts'
+import { UserLogged } from '../../service/arrays/UserLogged.ts'
+import { IUserRegister } from '../../types/models/IUserRegister.ts'
 
 export default function RegisterProducts () {
   const Navigate=useNavigate();
   const [ProductToRegister, setProductToRegister]=useState<IProduct>(IproductInicialState);
   const ProductsArray: IProduct[]=ProductArray
+  const userLogged = UserLogged;
 
   function handleChangeName(newName: string){
     const objectToSave: IProduct = {
@@ -61,13 +64,25 @@ export default function RegisterProducts () {
     })
   }
 
+  function handleChangeSeller(newSeller: IUserRegister){
+    const objectToSave: IProduct = {
+      ...ProductToRegister,
+    }
+    
+    objectToSave.seller = newSeller;
+    console.log(objectToSave);
+    
+    setProductToRegister({
+      ...objectToSave,
+    })
+  }
+
   function handleSave(){
+    handleChangeSeller(userLogged.UserLogged);
     ProductsArray.push(ProductToRegister);
     console.log(ProductsArray)
     Navigate('/products-list');
   }
-
-
   
   return (
     <>

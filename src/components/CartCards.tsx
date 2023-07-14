@@ -4,7 +4,7 @@ interface CartCardsProps {
     img: string;
     productName: string;
     productDescription: string; 
-    priceProduct: number;
+    priceProduct: string;
 }
 
 export const CartCards = ({img, productName, productDescription, priceProduct}: CartCardsProps) => {

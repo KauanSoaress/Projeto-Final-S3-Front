@@ -1,20 +1,19 @@
+import { IProduct } from '../service/arrays/ProductArray';
 import '../styles/SaleCard.css'
 
 interface SaleCardProps {
-  saleNumber: number;
   sellerName: string;
   dateTime: string;
-  productsList: string[][]
+  productsList: IProduct[];
 }
 
-export const SaleCard = ({saleNumber, sellerName, dateTime, productsList}: SaleCardProps) => {
+export const SaleCard = ({sellerName, dateTime, productsList}: SaleCardProps) => {
 
   let total = 0;
 
   return (
     <div className="sale-card-container">
       <div className="head">
-        <p>Venda: {saleNumber}</p>
         <p>{dateTime}</p>
         <p>{sellerName}</p>
       </div>
@@ -23,12 +22,12 @@ export const SaleCard = ({saleNumber, sellerName, dateTime, productsList}: SaleC
           productsList.map((element) => (
             <>
               <div>
-                <p>{element[0]}</p>
-                <p>R${element[1]}</p>
+                <p>{element.name}</p>
+                <p>R${element.price}</p>
               </div>
               {
                 <p hidden>
-                  {total += parseFloat(element[1].replace(",", "."))}
+                  {total += parseFloat(element.price.replace(",", "."))}
                 </p>
               }
             </>

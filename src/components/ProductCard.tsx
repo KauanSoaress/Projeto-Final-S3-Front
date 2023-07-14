@@ -1,4 +1,6 @@
 import '../styles/ProductCard.css'
+import { CartArray } from '../service/arrays/CartArray'
+import { ProductArray } from '../service/arrays/ProductArray'
 
 interface ProductCardProps {
   productImg: string;
@@ -9,6 +11,14 @@ interface ProductCardProps {
 }
 
 export const ProductCard = ({isPizzaOrCombo, productImg, productName, productDescription, productPrice}: ProductCardProps) => {
+  
+  const cartArray = CartArray;
+  const productArray = ProductArray;
+
+  function handleAddInCart() {
+    cartArray.push(productArray.filter((element) => element.name === productName)[0]);
+  }
+
   return (
     <>
       <div className="product">
@@ -26,7 +36,7 @@ export const ProductCard = ({isPizzaOrCombo, productImg, productName, productDes
             R${productPrice}
           </div>
 
-          <button className="add-in-cart">Adicionar ao carrinho</button>
+          <button onClick={handleAddInCart} className="add-in-cart">Adicionar ao carrinho</button>
         </div>
 
       </div>
