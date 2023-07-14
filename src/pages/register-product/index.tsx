@@ -13,68 +13,30 @@ import { IUserRegister } from '../../types/models/IUserRegister.ts'
 
 export default function RegisterProducts () {
   const Navigate=useNavigate();
-  const [ProductToRegister, setProductToRegister]=useState<IProduct>(IproductInicialState);
+  const ProductToRegister = IproductInicialState;
   const ProductsArray: IProduct[]=ProductArray
   const userLogged = UserLogged;
 
   function handleChangeName(newName: string){
-    const objectToSave: IProduct = {
-      ...ProductToRegister,
-    }
-    objectToSave.name = newName
-
-    setProductToRegister({
-      ...objectToSave,
-    })
+    ProductToRegister.name = newName
   }
 
   function handleChangeType(newType: string){
-    const objectToSave: IProduct = {
-      ...ProductToRegister,
-    }
-
-    objectToSave.type = newType;
-
-    setProductToRegister({
-      ...objectToSave,
-    })
+    ProductToRegister.type = newType
   }
 
   function handleChangePrice(newPrice: string){
-    const objectToSave: IProduct = {
-      ...ProductToRegister,
-    }
-
-    objectToSave.price = newPrice;
-
-    setProductToRegister({
-      ...objectToSave,
-    })
+    ProductToRegister.price = newPrice
   }
 
   function handleChangeDescription(newDescription: string){
-    const objectToSave: IProduct = {
-      ...ProductToRegister,
-    }
-
-    objectToSave.description = newDescription;
-
-    setProductToRegister({
-      ...objectToSave,
-    })
+    ProductToRegister.description = newDescription
   }
 
   function handleChangeSeller(newSeller: IUserRegister){
-    const objectToSave: IProduct = {
-      ...ProductToRegister,
+    ProductToRegister.seller = {
+      ...newSeller
     }
-    
-    objectToSave.seller = newSeller;
-    console.log(objectToSave);
-    
-    setProductToRegister({
-      ...objectToSave,
-    })
   }
 
   function handleSave(){
