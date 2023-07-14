@@ -9,7 +9,6 @@ export default function ProductsList(){
 
   const productsArray = ProductArray;
 
-
   return (
     <>
       <NavBar />
